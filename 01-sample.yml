@@ -2,3 +2,9 @@
   tasks:
     - ping:
 
+- name: First Playbook
+  hosts: all
+  tasks:
+    - name: Check Ping
+      ansible.builtin.ping:
+
