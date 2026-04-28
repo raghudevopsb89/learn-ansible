@@ -28,3 +28,18 @@
   roles:
     - sample
 
+- name: Variables demo - Task Level
+  hosts: web
+  tasks:
+    - name: Print variables - Task level
+      debug:
+        msg: "from_task - {{ from_task }}"
+      vars:
+        from_task: 700
+
+- name: Variables demo - From Command line
+  hosts: web
+  tasks:
+    - name: Print variables - Command line vars
+      debug:
+        msg: "from_cli - {{ from_cli }}"
