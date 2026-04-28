@@ -2,3 +2,11 @@
   ansible.builtin.debug:
     msg: Hello World
 
+- name: Print variables - Role level from defaults
+  debug:
+    msg: "from_role_defaults - {{ from_role_defaults }}"
+
+- name: Print variables - Role level from vars
+  debug:
+    msg: "from_role_vars - {{ from_role_vars }}"
+
