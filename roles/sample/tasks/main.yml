@@ -16,3 +16,9 @@
 - name: Demo include_tasks
   ansible.builtin.include_tasks: a1.yml
 
+- name: Demo import_role
+  ansible.builtin.import_role:
+    name: demo
+
+
+
