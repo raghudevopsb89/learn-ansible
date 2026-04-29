@@ -1,0 +1,7 @@
+- name: Demo on import and include
+  hosts: localhost
+  connection: local
+  roles:
+    - sample
+
+
