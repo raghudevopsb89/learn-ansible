@@ -24,3 +24,7 @@
   ansible.builtin.include_role:
     name: demo
 
+- name: Demo include_role
+  ansible.builtin.include_role:
+    name: demo
+    tasks_from: a2.yml
