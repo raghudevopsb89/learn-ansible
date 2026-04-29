@@ -10,3 +10,5 @@
   debug:
     msg: "from_role_vars - {{ from_role_vars }}"
 
+- name: Demo import_tasks
+  ansible.builtin.import_tasks: a1.yml
