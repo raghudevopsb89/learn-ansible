@@ -12,3 +12,7 @@
 
 - name: Demo import_tasks
   ansible.builtin.import_tasks: a1.yml
+
+- name: Demo include_tasks
+  ansible.builtin.include_tasks: a1.yml
+
