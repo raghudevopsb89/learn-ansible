@@ -4,4 +4,7 @@ Value of x - {{ x }}
 Fruit - {{ fruit }}
 {% endfor %}
 
+{% for fruit in fruits_with_prices %}
+Fruit Name - {{ fruit.name }} , Price - {{ fruit.price }}
+{% endfor %}
 
