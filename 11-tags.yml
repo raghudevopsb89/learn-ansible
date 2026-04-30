@@ -1,0 +1,13 @@
+- name: Tags demo
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Install Nginx
+      ansible.builtin.debug:
+        msg: Install Nginx
+      tags: [install, packages]
+
+    - name: Update Configuration
+      ansible.builtin.debug:
+        msg: Copy configuration
+      tags: [install, configuration ]
