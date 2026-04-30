@@ -1,0 +1,12 @@
+- name: Variable from Inventory
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Check disk usage
+      ansible.builtin.shell: df -h
+      register: disk_output
+
+    - name: Print output
+      ansible.builtin.debug:
+        msg: "{{disk_output}}"
+
