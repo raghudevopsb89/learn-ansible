@@ -1,0 +1,25 @@
+- name: Variable from Inventory
+  hosts: localhost
+  connection: local
+  vars:
+    x: 100
+    fruits:
+      - apple
+      - banana
+    fruits_with_prices:
+      - { name: apple, price: 100 }
+      - { name: banana, price: 200 }
+      - name: orange
+        price: 600
+  tasks:
+    - name: Copy template - with map
+      notify: Print a Message
+      ansible.builtin.template:
+        src: sample.txt
+        dest: /tmp/s3.txt
+
+  handlers:
+    - name: Print a Message
+      ansible.builtin.debug:
+        msg: Yes file has been modified
+
