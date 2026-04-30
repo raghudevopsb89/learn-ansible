@@ -5,6 +5,10 @@ Fruit - {{ fruit }}
 {% endfor %}
 
 {% for fruit in fruits_with_prices %}
-Fruit Name - {{ fruit.name }} , Price - {{ fruit.price }}
+{% if fruit.price < 500 %}
+Fruit Name - {{ fruit.name }} , Price - {{ fruit.price }}, Premium - No
+{% else %}
+Fruit Name - {{ fruit.name }} , Price - {{ fruit.price }}, Premium - Yes
+{% endif %}
 {% endfor %}
 
