@@ -17,8 +17,7 @@
         dest: /tmp/ip
 
 - name: Disable facts
-  hosts: localhost
-  connection: local
+  hosts: all
   gather_facts: no
   tasks:
     - name: Config file update
