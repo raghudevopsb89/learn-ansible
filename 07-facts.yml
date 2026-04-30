@@ -1,4 +1,4 @@
-- name: Variable from Inventory
+- name: Variable from facts
   hosts: localhost
   connection: local
   tasks:
@@ -14,4 +14,14 @@
     - name: Config file update - Another way
       ansible.builtin.copy:
         content: "IP: {{ansible_facts.default_ipv4.address}}"
+        dest: /tmp/ip
+
+- name: Disable facts
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: Config file update
+      ansible.builtin.copy:
+        content: "IP: {{ansible_facts['default_ipv4']['address']}}"
         dest: /tmp/ip
